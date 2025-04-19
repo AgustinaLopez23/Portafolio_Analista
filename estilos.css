@@ -1,0 +1,388 @@
+/* estilo general */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('img/james-harrison-vpOeXr5wmR4-unsplash.jpg');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    background-attachment: fixed; /* Para que la imagen de fondo no se desplace con el contenido */
+    color: #65ccff;
+}
+body::before {
+    
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 21, 0.548); /* Color blanco con 50% de opacidad */
+    z-index: -1; /* Para que la capa esté detrás del contenido */
+}
+
+/* Navegación */
+
+.navegacion {
+    padding: 1em;
+    text-align: center;
+    background-color: transparent;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 2em;
+}
+
+.navegacion a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #65ccff;
+    font-size: 1.1em;
+}
+
+/* Sección principal */
+
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.nombre {
+    font-weight: 800;
+}
+
+.descripcion {
+    font-size: 1.5em;
+    margin: 1em auto;
+    max-width: 600px;
+}
+
+/* Estilos para la sección Sobre mí */
+
+.sobremi {
+    text-align: center;
+    padding: 4em 2em;
+    background: rgba(255, 255, 255, 0.711); /* Sutil transparencia */
+    margin: 2em auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sobremi h2 {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.sobremi h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #004d40;
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
+.sobremi p {
+    font-size: 1.5em;
+    color: #2e7d72;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para la sección habilidades */
+
+.habilidades {
+    text-align: center;
+    padding: 4em 2em;
+    background: rgba(255, 255, 255, 0.711);
+    margin: 2em auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.habilidades h2 {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.habilidades h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #004d40;
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
+.contenedor-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.habilidad i {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+.habilidad:hover i {
+    transform: scale(1.2); /* Escala el icono al 120% al hacer hover */
+}
+
+.habilidad span {
+    font-size: 1.1em;
+    color: #2e7d72;
+    font-weight: 500;
+}
+
+.habilidad .icono-habilidad {
+    font-size: 3em; /* Intenta igualar el tamaño de los iconos de Devicons */
+    margin-bottom: 0.5em; /* Espacio debajo del icono */
+    opacity: 1; /* Asegúrate de que la opacidad no esté baja por defecto */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición suave */
+    width: 1.0em; /* Asegúrate de que tenga un ancho definido */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Para que respete el ancho y alto */
+}
+
+.habilidad:hover .icono-habilidad {
+    transform: scale(1.2); /* Escala el icono al 120% al hacer hover */
+}
+
+/* Estilos para la sección proyectos*/
+
+.proyectos-seccion {
+    text-align: center; /* Centrar el contenido de la sección */
+    padding: 4em 2em; /* Espacio interior alrededor de la sección */
+    background-color: #f9f9f9; /* Un color de fondo claro */
+    margin: 2em auto; /* Margen superior e inferior y centrado horizontal */
+    max-width: 1000px; /* Ancho máximo para que el contenido no se extienda demasiado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.proyectos-titulo {
+    font-size: 2.5em; /* Tamaño del título "Proyectos" */
+    color: #004d40; /* Color del título */
+    margin-bottom: 1em; /* Espacio debajo del título */
+    position: relative; /* Para el pseudo-elemento de la línea */
+}
+
+.proyectos-titulo::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #004d40; /* Color de la línea debajo del título */
+    margin: 0.5em auto 0; /* Centrar la línea */
+    border-radius: 2px;
+}
+
+.proyectos-descripcion {
+    font-size: 1.1em; /* Tamaño de la descripción */
+    color: #555; /* Color de la descripción */
+    margin-bottom: 2em; /* Espacio debajo de la descripción */
+    max-width: 700px; /* Ancho máximo para la descripción */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el contenedor de los proyectos (si tienes varios) */
+.contenedor-proyectos {
+    display: grid; /* Usar grid para organizar los proyectos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles */
+    gap: 2em; /* Espacio entre los proyectos */
+    padding: 1em;
+}
+
+/* Estilos para cada proyecto individual */
+.proyecto {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Para que los bordes redondeados afecten el contenido interior */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+}
+
+.proyecto:hover {
+    transform: translateY(-5px); /* Ligeramente hacia arriba al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-imagen {
+    width: 100%;
+    display: block; /* Evitar espacio extra debajo de la imagen */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.proyecto-info {
+    padding: 1.5em;
+    text-align: left;
+}
+
+.proyecto-titulo-individual {
+    font-size: 1.3em;
+    color: #276f92;
+    margin-bottom: 0.5em;
+}
+
+.proyecto-descripcion-individual {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.proyecto-links {
+    margin-top: 1em;
+}
+
+.proyecto-links a {
+    display: inline-block;
+    margin-right: 1em;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.proyecto-links a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para la sección CV */
+
+.cv-seccion {
+    max-width: 700px;
+    margin: 4em auto;
+    padding: 2em;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.711);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cv-seccion h2 {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 1em;
+}
+
+.cv-seccion p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.btn-descarga {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descarga:hover {
+    background-color: #004d40;
+}
+
+/* Estilos para la sección de Contacto */
+.contacto-seccion {
+    text-align: center;
+    padding: 4em 2em;
+    background: rgba(255, 255, 255, 0.711); /* Sutil transparencia */
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contacto-seccion h2 {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.contacto-seccion h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #004d40;
+    margin: 0.5em auto 0;
+    border-radius: 2px;
+}
+
+.contacto-seccion p {
+    font-size: 1.2em;
+    color: #2e7d72;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2em;
+}
+
+/* Estilos para el contenedor de los iconos */
+.iconos-contacto {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */
+    margin-top: 2em;
+}
+
+/* Estilos para los enlaces de los iconos (general) */
+.iconos-contacto a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease; /* Transición para la opacidad al pasar el ratón */
+}
+
+.iconos-contacto a:hover {
+    opacity: 0.7; /* Reduce la opacidad al pasar el ratón como efecto */
+}
+
+/* Estilos para las imágenes de los iconos */
+.iconos-contacto a img {
+    width: 2.5em; /* Ajusta el tamaño de los iconos */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 0.5em; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para el texto junto a los iconos */
+.iconos-contacto a span {
+    font-size: 0.8em;
+    color: #000000;
+}
